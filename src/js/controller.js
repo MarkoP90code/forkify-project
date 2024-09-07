@@ -140,6 +140,9 @@ const controlAddRecipe = async function(newRecipe) {
   }
 };
 
+const newFeature = function() {
+  console.log("WELCOME!");
+}
 
 const init = function () {        //Ovo smo valjda mogli i bez ove init funkcije. Samo da smo ovo unutar stavili u global scope.
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -156,6 +159,7 @@ const init = function () {        //Ovo smo valjda mogli i bez ove init funkcije
 
   addRecipeView.addHandlerUpload(controlAddRecipe);
   // controlServings();        //Ovo ne radi ovde zbog async. Probavamo da radimo forEach(), a nisu stigli podaci. Init registruje ove handler funkcije i odma poziva i ovo.
+  newFeature();
 };
 
 init();
